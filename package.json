@@ -1,0 +1,22 @@
+{
+  "name": "bowlingkatajs",
+  "version": "1.0.0",
+  "description": "Uncle Bob's bowling Kata in JS TDD",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha tests --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krukm/BowlingKataJS.git"
+  },
+  "author": "Matthew Kruk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krukm/BowlingKataJS/issues"
+  },
+  "homepage": "https://github.com/krukm/BowlingKataJS#readme",
+  "devDependencies": {
+    "mocha": "^5.0.5"
+  }
+}
