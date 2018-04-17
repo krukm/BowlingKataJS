@@ -11,12 +11,19 @@ BowlingGame.prototype.roll = function(pins) {
   this.round += 1;
 };
 
+BowlingGame.prototype.isSpare = function(f) {
+  return (this._roll[f * 2] + this._roll[f * 2 + 1] === 10);
+}
+
 BowlingGame.prototype.score = function() {
-  var _score = 0;
+  var score = 0;
   for(var j = 0; j < 10; j++) {
-    _score += this._roll[j * 2] + this._roll[j * 2 + 1];
+    if(this.isSpare(j)) {
+      score += this._roll[(j + 1) * 2]
+    }
+    score += this._roll[j * 2] + this._roll[j * 2 + 1];
   }
-  return _score;
+  return score;
 };
 
 module.exports = BowlingGame;
