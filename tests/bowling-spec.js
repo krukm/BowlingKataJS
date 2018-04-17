@@ -44,12 +44,11 @@ describe('Bowling Scorer', function() {
   });
 
   it('should return a score of 26 for a strike after rolling 5 plus 3 pins', function() {
-    game.roll(5);
-    game.roll(5);
+    game.roll(10);
     game.roll(5);
     game.roll(3);
 
     game.score().should.equal(26);
-  })
+  });
 
 });
