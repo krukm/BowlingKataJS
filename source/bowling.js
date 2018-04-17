@@ -1,17 +1,13 @@
 var BowlingGame = function() {
-  this.rolls = [];
+  this.score = 0;
 };
 
 BowlingGame.prototype.roll = function(pins) {
-  this.rolls.push(pins);
+  this.score += pins;
 };
 
 BowlingGame.prototype.score = function() {
-  var total = 0;
-  for (i = 0; i < this.rolls.length; i++) {
-    total += this.rolls[i];
-  }
-  return total;
+  return this.score();
 };
 
 module.exports = BowlingGame;
