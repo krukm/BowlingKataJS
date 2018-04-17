@@ -34,4 +34,13 @@ describe('Bowling Scorer', function () {
      game.score.should.equal(20);
    });
 
+   it('should return a score of 23 for a spare after rolling 5 plus 3 pins', function() {
+     game.roll(5);
+     game.roll(5);
+     game.roll(5);
+     game.roll(3);
+
+     game.score.should.equal(23);
+   });
+
 });
