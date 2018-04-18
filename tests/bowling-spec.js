@@ -5,6 +5,12 @@ let should = require('should');
 
 describe('Bowling Scorer', function() {
 
+  BowlingGame.prototype.multilpleRoll = function(rolls, pins) {
+    for(var i = 0; i < rolls; i++) {
+      this.roll(pins);
+    }
+  };
+
   var game;
 
   beforeEach(function() {
@@ -49,6 +55,11 @@ describe('Bowling Scorer', function() {
     game.roll(3);
 
     game.score().should.equal(26);
+  });
+
+  it('should return score of 300 for all strikes', function() {
+    game.multilpleRoll(12, 10);
+    game.score().should.equal(300);
   });
 
 });
